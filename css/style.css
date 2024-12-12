@@ -1,0 +1,461 @@
+* {
+	margin: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+	background-color: #f4f7fc;
+}
+
+.navbarSPK {
+    background-color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.brand img {
+    width: 200px; 
+    height: auto;
+}
+
+.headerSPK {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.headerSPK li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.headerSPK a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.headerSPK a:hover {
+    color: #d7b8b8; 
+}
+
+.headerSPK i {
+    margin-left: 5px;
+    color: #770000;
+    font-size: 12px;
+}
+
+
+.panah {
+    transition: transform 0.3s ease;
+}
+
+.headerSPK li:hover .panah {
+    transform: translateX(5px);
+}
+
+
+@media (max-width: 768px) {
+    .navbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headerSPK {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headerSPK li {
+        margin: 5px 0;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 8px;
+	align-items: center;
+}
+
+.btnPosition{
+	display: flex;
+	flex-direction: column; 
+	align-items: end;
+	margin-right: 50px;
+	padding: 20px;
+}
+
+.outer-card {
+    padding: 15px;
+    background-color: #000000;
+    border-radius: 8px;
+	text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin: 50px;
+}
+
+.card-body h2{
+	margin-bottom: 25px;
+	color: white;
+}
+
+.flex-align {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+}
+
+.inner-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.inner-card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .inner-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .inner-card {
+        width: 22%;
+        margin: 0 15px 20px;
+    }
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 30px;
+	color: #333;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #ffffff;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+th, td {
+	padding: 12px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	border-right: 2px solid #ffffff;
+}
+
+th {
+	background-color: #000000;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+th:first-child, td:first-child {
+    width: 60px; 
+    white-space: nowrap; 
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: auto; 
+    text-align: left; 
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 200px; 
+    text-align: center; 
+}
+
+tr:hover {
+	background-color: #f1f1f1;
+}
+
+.btn {
+	padding: 6px 12px;
+	font-size: 14px;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.btn-edit {
+	background-color: #ffc107;
+	color: white;
+}
+
+.btn-delete {
+	background-color: #dc3545;
+	color: white;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+.btn-edit:hover {
+	background-color: #e0a800;
+}
+
+.btn-delete:hover {
+	background-color: #c82333;
+}
+
+.btn {
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 10px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.btn-tambah {
+	background-color: #28a745;
+	text-align: center;
+	width: 150px;
+	color: white;
+	border: none;
+}
+
+.btn-lanjut {
+	background-color: #007bff;
+	color: white;
+	text-align: center;
+	width: 150px;
+	border: none;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+.btn-tambah:hover {
+	background-color: #218838;
+}
+
+.btn-lanjut:hover {
+	background-color: #0056b3;
+}
+
+/* Efek Hover pada baris */
+tr:hover td {
+	background-color: #e9ecef;
+}
+
+/* Global Styles */
+:root {
+    --perkri-primary-color: #000000;
+    --perkri-bg-color: #f4f7fa;
+    --perkri-card-bg: #fff;
+    --perkri-card-hover: #e1f5fe;
+    --perkri-form-bg: #ffffff;
+    --perkri-border-color: #ddd;
+    --perkri-input-border: #ccc;
+    --perkri-btn-color: #007bff;
+    --perkri-btn-hover: #0056b3;
+    --perkri-text-color: #333;
+    --perkri-font-family: 'Arial', sans-serif;
+    --perkri-font-size: 16px;
+}
+
+/* Container */
+.perkri-container {
+    font-family: var(--perkri-font-family);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--perkri-bg-color);
+}
+
+/* Page Title */
+.perkri-page-title {
+    font-size: 2rem;
+    color: var(--perkri-primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Criteria List */
+.perkri-criteria-list {
+    margin-bottom: 40px;
+}
+
+.perkri-heading {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--perkri-text-color);
+}
+
+/* Cards Layout (Horizontal with fixed size) */
+.perkri-criteria-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.perkri-card {
+    background-color: var(--perkri-card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease;
+    text-align: center;
+    border: 2px solid var(--perkri-border-color);
+    width: auto; /* Set fixed width for the card */
+    height: auto; /* Set fixed height for the card */
+}
+
+.perkri-card:hover {
+    transform: scale(1.05);
+    background-color: var(--perkri-card-hover);
+}
+
+.perkri-card-title {
+    font-size: 1.2rem;
+    color: var(--perkri-primary-color);
+}
+
+.perkri-card-text {
+    font-size: 1rem;
+    color: var(--perkri-text-color);
+}
+
+/* Form Styles */
+.perkri-comparison-form {
+    background-color: var(--perkri-form-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perkri-form-group {
+    margin-bottom: 15px;
+}
+
+.perkri-label {
+    font-size: 1rem;
+    color: var(--perkri-text-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.perkri-input {
+    width: 100%;
+    padding: 10px;
+    font-size: var(--perkri-font-size);
+    border: 1px solid var(--perkri-input-border);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+.perkri-input:focus {
+    border: 1px solid var(--perkri-primary-color);
+    outline: none;
+}
+
+.selected-criteria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid var(--perkri-border-color);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.selected-criteria:hover {
+    background-color: var(--perkri-card-hover);
+}
+
+/* Button Styles */
+.perkri-btn-lanjut {
+    padding: 12px 20px;
+    background-color: var(--perkri-btn-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.perkri-btn-lanjut:hover {
+    background-color: var(--perkri-btn-hover);
+}
+
+/* Remove button style */
+.perkri-remove-btn {
+    display: block;
+    width: 100%;
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.perkri-remove-btn:hover {
+    background-color: #d43f3f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .perkri-criteria-cards {
+        flex-direction: column;
+    }
+}
