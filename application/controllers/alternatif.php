@@ -90,11 +90,18 @@ class Alternatif extends CI_Controller
         $cr = $this->session->userdata('cr');
 
         if (empty($matrix) || empty($normalized_matrix) || empty($weights) || empty($cr)) {
-            echo "Data AHP tidak ditemukan di session.";
-            return;
+            $db_data = $this->alternatif_model->getAHPData();
+            if (empty($db_data)) {
+                echo "Data AHP tidak ditemukan di database.";
+                return;
+            }
+
+            $matrix = $db_data['matrix'];
+            $normalized_matrix = $db_data['normalized_matrix'];
+            $weights = $db_data['weights'];
+            $cr = $db_data['cr'];
         }
 
-        $this->load->model('alternatif_model');
         $alternatif_data = $this->alternatif_model->getAllAlternatif();
 
         $alternatif = [];
@@ -139,6 +146,16 @@ class Alternatif extends CI_Controller
         foreach ($alternatif as $i => &$alt) {
             $alt['s_value'] = $s_values[$i];
             $alt['v_value'] = $v_values[$i];
+        }
+
+        usort($alternatif, function ($a, $b) {
+            return $b['v_value'] <=> $a['v_value'];
+        });
+
+        foreach ($alternatif as $i => &$alt) {
+            $alt['ranking'] = $i + 1;
+
+            $this->alternatif_model->update_perhitungan($alt['id_alternatif'], $alt['s_value'], $alt['v_value'], $alt['ranking']);
         }
 
         $data['matrix'] = $matrix;

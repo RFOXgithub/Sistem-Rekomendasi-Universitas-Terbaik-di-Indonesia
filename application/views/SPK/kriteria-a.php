@@ -42,14 +42,14 @@
         inputs.forEach(input => {
             if (parseFloat(input.value) === 0) {
                 isValid = false;
-                input.style.borderColor = 'red';
+                input.style.borderColor = 'red'; 
             } else {
-                input.style.borderColor = '';
+                input.style.borderColor = ''; 
             }
         });
         if (!isValid) {
             alert("Nilai tidak boleh 0, silakan masukkan nilai yang valid.");
-            event.preventDefault();
+            event.preventDefault(); 
         }
     });
 </script>

@@ -35,9 +35,9 @@
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>Kriteria</th>
-                <th>Jenis Kriteria</th>
-                <th>Bobot</th>
+                <th>Akreditasi</th>
+                <th>Fasilitas</th>
+                <th>UKT</th>
             </tr>
         </thead>
         <tbody>
@@ -79,7 +79,7 @@
 
     <h2 style="margin-top: 25px;">Consistency Ratio (CR)</h2>
     <p style="margin-right:auto;">
-        CR: <?php echo number_format($cr, 3); ?>
+        CR: <?php echo number_format($cr, 10); ?>
         <?php if ($cr > 0.1): ?>
             <span style="color: red;">(Tidak Konsisten)</span>
         <?php else: ?>
