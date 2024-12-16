@@ -1,42 +1,31 @@
-<?php
-$kriteria = [
-    ['id' => 1, 'nama' => 'Kriteria A'],
-    ['id' => 2, 'nama' => 'Kriteria B'],
-    ['id' => 3, 'nama' => 'Kriteria C'],
-    ['id' => 4, 'nama' => 'Kriteria D']
-];
-?>
-
 <div class="container">
-    <h2>Kriteria</h2>
-    <table>
+    <h2>Data Kriteria</h2>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>No</th>
-                <th>Nama Kriteria</th>
-                <th>Aksi</th>
+                <th>Kriteria</th>
+                <th>Nilai</th>
+                <th>Penjelasan</th>
             </tr>
         </thead>
         <tbody>
-            <?php
-            // Menampilkan data dalam tabel
-            foreach ($kriteria as $index => $data) {
-                echo "<tr>";
-                echo "<td>" . ($index + 1) . "</td>";
-                echo "<td>" . htmlspecialchars($data['nama']) . "</td>";
-                echo "<td>
-                        <a href='#' class='btn btn-edit'>Edit</a>
-                        <a href='#' class='btn btn-delete' onclick='return confirm(\"Apakah Anda yakin ingin menghapus?\")'>Delete</a>
-                      </td>";
-                echo "</tr>";
-            }
-            ?>
+            <?php $i = 1; ?>
+            <?php foreach ($grouped_kriteria as $kriteria => $rows): ?>
+                <tr>
+                    <td rowspan="<?php echo count($rows); ?>"><?php echo $i++; ?></td>
+                    <td rowspan="<?php echo count($rows); ?>"><?php echo $kriteria; ?></td>
+                    <td><?php echo $rows[0]['nilai_sub_kriteria']; ?></td>
+                    <td><?php echo $rows[0]['nama_sub_kriteria']; ?></td>
+                </tr>
+                <?php foreach (array_slice($rows, 1) as $row): ?>
+                    <tr>
+                        <td><?php echo $row['nilai_sub_kriteria']; ?></td>
+                        <td><?php echo $row['nama_sub_kriteria']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
         </tbody>
     </table>
-</div>
-
-<div class="btnPosition">
-    <a href="#" class="btn btn-tambah">Tambah Kriteria</a>
-
-    <a href="#" class="btn btn-lanjut">Lanjut</a>
+    <a href="<?php echo site_url('kriteria/perbandinganKriteria/'); ?>" class="btn btn-lanjut" style="margin-left: auto;">Lanjut</a>
 </div>
