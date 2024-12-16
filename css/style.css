@@ -61,7 +61,6 @@ body{
     font-size: 12px;
 }
 
-
 .panah {
     transition: transform 0.3s ease;
 }
@@ -69,7 +68,6 @@ body{
 .headerSPK li:hover .panah {
     transform: translateX(5px);
 }
-
 
 @media (max-width: 768px) {
     .navbar-inner {
@@ -207,7 +205,6 @@ tr:hover {
 	background-color: #f1f1f1;
 }
 
-
 .btn {
 	padding: 6px 12px;
 	font-size: 14px;
@@ -275,12 +272,10 @@ tr:hover {
 	background-color: #0056b3;
 }
 
-/* Efek Hover pada baris */
 tr:hover td {
 	background-color: #e9ecef;
 }
 
-/* Global Styles */
 :root {
     --perkri-primary-color: #000000;
     --perkri-bg-color: #f4f7fa;
@@ -296,7 +291,6 @@ tr:hover td {
     --perkri-font-size: 16px;
 }
 
-/* Container */
 .perkri-container {
     font-family: var(--perkri-font-family);
     max-width: 1200px;
@@ -305,7 +299,6 @@ tr:hover td {
     background-color: var(--perkri-bg-color);
 }
 
-/* Page Title */
 .perkri-page-title {
     font-size: 2rem;
     color: var(--perkri-primary-color);
@@ -313,7 +306,6 @@ tr:hover td {
     text-align: center;
 }
 
-/* Criteria List */
 .perkri-criteria-list {
     margin-bottom: 40px;
 }
@@ -324,7 +316,6 @@ tr:hover td {
     color: var(--perkri-text-color);
 }
 
-/* Cards Layout (Horizontal with fixed size) */
 .perkri-criteria-cards {
     display: flex;
     flex-wrap: wrap;
@@ -340,8 +331,8 @@ tr:hover td {
     transition: transform 0.3s ease, border 0.3s ease;
     text-align: center;
     border: 2px solid var(--perkri-border-color);
-    width: auto; /* Set fixed width for the card */
-    height: auto; /* Set fixed height for the card */
+    width: auto;
+    height: auto;
 }
 
 .perkri-card:hover {
@@ -359,7 +350,6 @@ tr:hover td {
     color: var(--perkri-text-color);
 }
 
-/* Form Styles */
 .perkri-comparison-form {
     background-color: var(--perkri-form-bg);
     padding: 30px;
@@ -409,7 +399,6 @@ tr:hover td {
     background-color: var(--perkri-card-hover);
 }
 
-/* Button Styles */
 .perkri-btn-lanjut {
     padding: 12px 20px;
     background-color: var(--perkri-btn-color);
@@ -426,7 +415,6 @@ tr:hover td {
     background-color: var(--perkri-btn-hover);
 }
 
-/* Remove button style */
 .perkri-remove-btn {
     display: block;
     width: 100%;
@@ -444,7 +432,6 @@ tr:hover td {
     background-color: #d43f3f;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .perkri-criteria-cards {
         flex-direction: column;
@@ -468,7 +455,6 @@ form input, form select {
     box-sizing: border-box;
 }
 
-/* Overall container styling */
 .alt-container {
     max-width: 600px;
     margin: 50px auto;
@@ -478,7 +464,6 @@ form input, form select {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Form title styling */
 .alt-form-title {
     text-align: center;
     font-size: 24px;
@@ -487,12 +472,10 @@ form input, form select {
     margin-bottom: 20px;
 }
 
-/* Form groups (label and input field container) */
 .alt-form-group {
     margin-bottom: 20px;
 }
 
-/* Label styling */
 .alt-label {
     display: block;
     font-size: 16px;
@@ -501,7 +484,6 @@ form input, form select {
     margin-bottom: 8px;
 }
 
-/* Input fields styling */
 .alt-input {
     width: 100%;
     padding: 12px;
@@ -514,13 +496,11 @@ form input, form select {
     transition: border-color 0.3s ease-in-out;
 }
 
-/* Focus effect for input fields */
 .alt-input:focus {
     border-color: #007bff;
     outline: none;
 }
 
-/* Submit button styling */
 .alt-btn-primary {
     width: 100%;
     padding: 12px;
@@ -533,12 +513,10 @@ form input, form select {
     transition: background-color 0.3s ease;
 }
 
-/* Hover effect for submit button */
 .alt-btn-primary:hover {
     background-color: #0056b3;
 }
 
-/* Cancel button styling */
 .alt-btn-secondary {
     width: 100%;
     padding: 12px;
@@ -552,12 +530,10 @@ form input, form select {
     margin-top: 10px;
 }
 
-/* Hover effect for cancel button */
 .alt-btn-secondary:hover {
     background-color: #495057;
 }
 
-/* Optional: Add a smooth animation to form elements on load */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -569,4 +545,18 @@ form input, form select {
 
 .alt-container {
     animation: fadeIn 1s ease-out;
+}
+
+.brand-text {
+    font-family:fantasy; 
+    font-size: 36px; 
+    font-weight: bold;
+    color: #ffffff; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    transition: color 0.3s ease;
+}
+
+.brand-text:hover {
+    color: #FF5722;
 }

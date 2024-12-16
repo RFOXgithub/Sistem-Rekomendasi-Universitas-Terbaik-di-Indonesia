@@ -44,7 +44,7 @@
 
     <h2 style="margin-top:25px">Kesimpulan</h2>
     <?php
-    // Cari alternatif terbaik berdasarkan nilai preferensi tertinggi
+
     usort($alternatif, function ($a, $b) {
         return $b['v_value'] <=> $a['v_value'];
     });

@@ -1,6 +1,6 @@
 <div class="container">
     <h2>Masukkan Perbandingan</h2>
-    <form method="POST" action="<?php echo site_url('kriteria/hitung_matriks'); ?>">
+    <form method="POST" action="<?php echo site_url('kriteria/hitung_matriks'); ?>" id="comparisonForm">
         <table>
             <tr>
                 <th>Kriteria 1</th>
@@ -33,3 +33,23 @@
         <button type="submit" class="btn btn-lanjut" style="margin-left: auto;">Lanjut</button>
     </form>
 </div>
+
+<script>
+    document.getElementById('comparisonForm').addEventListener('submit', function(event) {
+        const inputs = document.querySelectorAll('input[type="number"]');
+        let isValid = true;
+
+        inputs.forEach(input => {
+            if (parseFloat(input.value) === 0) {
+                isValid = false;
+                input.style.borderColor = 'red';
+            } else {
+                input.style.borderColor = '';
+            }
+        });
+        if (!isValid) {
+            alert("Nilai tidak boleh 0, silakan masukkan nilai yang valid.");
+            event.preventDefault();
+        }
+    });
+</script>

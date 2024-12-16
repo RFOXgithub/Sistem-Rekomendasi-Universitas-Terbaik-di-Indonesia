@@ -33,19 +33,16 @@ class Kriteria extends CI_Controller
 
     public function hitung_matriks()
     {
-        // Ambil bobot dari perhitungan matriks
         $akreditasi_fasilitas = $this->input->post('akreditasi_fasilitas');
         $akreditasi_biaya = $this->input->post('akreditasi_biaya');
         $fasilitas_biaya = $this->input->post('fasilitas_biaya');
 
-        // Matriks perbandingan dan perhitungan bobot
         $matrix = [
             [1, $akreditasi_fasilitas, $akreditasi_biaya],
             [1 / $akreditasi_fasilitas, 1, $fasilitas_biaya],
             [1 / $akreditasi_biaya, 1 / $fasilitas_biaya, 1]
         ];
 
-        // Normalisasi matriks dan bobot
         $column_sum = array_map(function ($column) {
             return array_sum($column);
         }, array_map(null, ...$matrix));
@@ -61,13 +58,13 @@ class Kriteria extends CI_Controller
             $weights[] = array_sum($normalized_row) / count($row);
         }
 
-        // Perhitungan CR
         $lambda_max = 0;
         foreach ($matrix as $i => $row) {
             $weighted_sum = 0;
             foreach ($row as $j => $value) {
                 $weighted_sum += $value * $weights[$j];
             }
+
             $lambda_max += $weighted_sum / $weights[$i];
         }
         $lambda_max /= count($matrix);
@@ -77,7 +74,6 @@ class Kriteria extends CI_Controller
         $random_index = 0.58;
         $cr = $consistency_index / $random_index;
 
-        // Menyimpan data ke sesi
         $this->session->set_userdata([
             'matrix' => $matrix,
             'normalized_matrix' => $normalized_matrix,
@@ -85,7 +81,6 @@ class Kriteria extends CI_Controller
             'cr' => $cr
         ]);
 
-        // Kirim data ke view
         $data['matrix'] = $matrix;
         $data['normalized_matrix'] = $normalized_matrix;
         $data['weights'] = $weights;

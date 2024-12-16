@@ -36,6 +36,6 @@ class Alternatif_model extends CI_Model
     public function update($id, $data)
     {
         $this->db->where('id_alternatif', $id);
-        $this->db->update('alternatif', $data); // Update data berdasarkan ID
+        $this->db->update('alternatif', $data); 
     }
 }

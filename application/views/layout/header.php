@@ -28,21 +28,26 @@
 
 <body>
 
-    <div class="navbarSPK">
+    <div class="navbarSPK" style="position: fixed; top: 0; width: 100%; z-index: 1000;">
         <div class="navbar-inner">
             <div class="container-fluid">
                 <a class="brand" href="<?= base_url() ?>">
-                    <img src="<?= base_url('img/logo_bnsp_cutted.jpg') ?>" width="200" alt="Logo">
+                    <span class="brand-text">Kelompok 7 SPK - UPN "VETERAN" JATIM</span>
                 </a>
 
                 <ul class="headerSPK">
                     <li><a href="<?= base_url('home') ?>" class="flex-align">Home<span class="material-icons">chevron_right</span></a></li>
                     <li><a href="<?= base_url('kriteria') ?>" class="flex-align">Kriteria<span class="material-icons">chevron_right</span></a></li>
                     <li><a href="<?= base_url('alternatif') ?>" class="flex-align">Alternatif<span class="material-icons">chevron_right</span></a></li>
-                    <li><a href="<?= base_url('kriteria/perbandinganKriteria') ?>" class="flex-align">Perbandingan Kriteria<span class="material-icons">chevron_right</span></a></li>
-                    <li><a href="<?= base_url('kriteria.php') ?>" class="flex-align">Perbandingan Alternatif<span class="material-icons">chevron_right</span></a></li>
-                    <li><a href="<?= base_url('kriteria.php') ?>" class="flex-align">Hasil<span class="material-icons" style="opacity: 0;">chevron_right</span></a></li>
+                    <li><a href="<?= base_url('alternatif/process_wp') ?>" class="flex-align">Hasil<span class="material-icons" style="opacity: 0;">chevron_right</span></a></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbarSPK">
+        <div class="navbar-inner">
+            <div class="container-fluid">
             </div>
         </div>
     </div>

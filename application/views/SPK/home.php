@@ -5,9 +5,9 @@
             <?php
             $anggota = [
                 ['nama' => 'Rival Septian Jeflin Manti', 'npm' => '21082010152'],
-                ['nama' => 'Rival Septian Jeflin Manti', 'npm' => '21082010152'],
-                ['nama' => 'Rival Septian Jeflin Manti', 'npm' => '21082010152'],
-                ['nama' => 'Rival Septian Jeflin Manti', 'npm' => '21082010152']
+                ['nama' => 'Fariz', 'npm' => '21082010156'],
+                ['nama' => 'Rendi Hardiartama', 'npm' => '21082010094'],
+                ['nama' => 'Ferdi Puguh Margono', 'npm' => '21082010106']
             ];
             foreach ($anggota as $member) {
                 echo '<div class="col-md-3 mb-4">';
