@@ -6,7 +6,7 @@
                 <th></th>
                 <th>Akreditasi</th>
                 <th>Fasilitas</th>
-                <th>UKT</th>
+                <th>Biaya</th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +37,7 @@
             <tr>
                 <th>Akreditasi</th>
                 <th>Fasilitas</th>
-                <th>UKT</th>
+                <th>Biaya</th>
             </tr>
         </thead>
         <tbody>
@@ -70,7 +70,7 @@
                 <td><?php echo round($weights[1], 3); ?></td>
             </tr>
             <tr>
-                <td>UKT</td>
+                <td>Biaya</td>
                 <td>Cost</td>
                 <td><?php echo round($weights[2], 3); ?></td>
             </tr>
