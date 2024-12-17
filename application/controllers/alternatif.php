@@ -84,6 +84,9 @@ class Alternatif extends CI_Controller
 
     public function process_wp()
     {
+
+        $data['title'] = "Hasil";
+
         $matrix = $this->session->userdata('matrix');
         $normalized_matrix = $this->session->userdata('normalized_matrix');
         $weights = $this->session->userdata('weights');
