@@ -62,6 +62,7 @@ class Alternatif extends CI_Controller
 
     public function edit($id)
     {
+        $data['title'] = "Edit Alternatif";
         $data['row'] = $this->alternatif_model->get_by_id($id);
 
         $this->load->view('layout/header', $data);

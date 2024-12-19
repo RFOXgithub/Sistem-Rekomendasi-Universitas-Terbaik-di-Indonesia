@@ -32,6 +32,7 @@ class Kriteria extends CI_Controller
         $this->session->unset_userdata('normalized_matrix');
         $this->session->unset_userdata('weights');
         $this->session->unset_userdata('cr');
+        $data['grouped_kriteria'] = $this->kriteria_model->get_all_importance();
 
         $this->load->view('layout/header', $data);
         $this->load->view('SPK/kriteria-a', $data);

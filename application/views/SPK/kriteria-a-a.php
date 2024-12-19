@@ -62,17 +62,17 @@
             <tr>
                 <td>Akreditasi</td>
                 <td>Benefit</td>
-                <td><?php echo round($weights[0], 3); ?></td>
+                <td><?php echo $weights[0]; ?></td>
             </tr>
             <tr>
                 <td>Fasilitas</td>
                 <td>Benefit</td>
-                <td><?php echo round($weights[1], 3); ?></td>
+                <td><?php echo $weights[1]; ?></td>
             </tr>
             <tr>
                 <td>Biaya</td>
                 <td>Cost</td>
-                <td><?php echo round($weights[2], 3); ?></td>
+                <td><?php echo $weights[2]; ?></td>
             </tr>
         </tbody>
     </table>

@@ -7,6 +7,7 @@
                 <th>Kriteria</th>
                 <th>Nilai</th>
                 <th>Penjelasan</th>
+                <th>Indicator</th>
             </tr>
         </thead>
         <tbody>
@@ -17,11 +18,13 @@
                     <td rowspan="<?php echo count($rows); ?>"><?php echo $kriteria; ?></td>
                     <td><?php echo $rows[0]['nilai_sub_kriteria']; ?></td>
                     <td><?php echo $rows[0]['nama_sub_kriteria']; ?></td>
+                    <td style="text-align: left;"><?php echo nl2br($rows[0]['indicator']); ?></td>
                 </tr>
                 <?php foreach (array_slice($rows, 1) as $row): ?>
                     <tr>
                         <td><?php echo $row['nilai_sub_kriteria']; ?></td>
                         <td><?php echo $row['nama_sub_kriteria']; ?></td>
+                        <td style="text-align: left;"><?php echo nl2br($row['indicator']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php endforeach; ?>

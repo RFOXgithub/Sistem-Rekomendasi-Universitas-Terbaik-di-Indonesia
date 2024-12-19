@@ -57,5 +57,5 @@
         return $b['v_value'] <=> $a['v_value'];
     });
     ?>
-    <p style="margin-right:auto">Alternatif terbaik adalah <strong><?php echo $alternatif[0]['nama_universitas']; ?></strong> dengan nilai preferensi <strong><?php echo round($alternatif[0]['v_value'], 6); ?></strong>.</p>
+    <p style="margin-right:auto">Alternatif universitas terbaik di Indonesia adalah <strong><?php echo $alternatif[0]['nama_universitas']; ?></strong> dengan nilai preferensi tertinggi sebesar <strong><?php echo round($alternatif[0]['v_value'], 6); ?></strong>. Hal ini menunjukkan bahwa <strong><?php echo $alternatif[0]['nama_universitas']; ?></strong> memiliki keunggulan paling menonjol berdasarkan kriteria yang ada.
 </div>

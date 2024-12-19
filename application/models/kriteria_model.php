@@ -17,4 +17,10 @@ class Kriteria_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+
+    public function get_all_importance()
+    {
+        $query = $this->db->get('importance_scale');
+        return $query->result_array(); 
+    }
 }
